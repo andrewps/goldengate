@@ -1,0 +1,119 @@
+extends layout
+
+block nav-sms
+  li.active: a(href='/') SMS/MMS
+
+block header-title
+  h1 SMS & MMS
+block header-button
+
+block content
+  .row
+    .col-sm-4
+      .col-sm-6
+        label Account
+        pre.code 123456789
+      .col-sm-6
+        label API Key
+        pre.code ef46ceff50ea5d0210e3d478a88e35d4
+    .col-sm-8
+      .col-sm-6
+        a(href="/numbers", class="sms-link link-numbers")
+          h4 Phone Numbers
+          p Buy and manage more phone numbers here
+      .col-sm-6
+        a(href="/help", class="sms-link link-help")
+          h4 Need Help?
+          p Browse our Help Section and Documentation
+  
+  ul.nav.nav-tabs(role='tablist')
+    li.active(role='presentation')
+      a(href='#home', aria-controls='home', role='tab', data-toggle='tab') Usage
+    li(role='presentation')
+      a(href='#profile', aria-controls='profile', role='tab', data-toggle='tab') Logs
+  .card
+    .tab-content
+      #home.tab-pane.fade.in.active(role='tabpanel') Usage
+      #profile.tab-pane.fade(role='tabpanel')
+        form#searchLogs
+          .row
+            .col-sm-4
+              .form-group
+                label Search
+                input(type="text", class="form-control", placeholder="eg: 123456")
+            .col-sm-2
+              .form-group
+                label Start Time
+                input(type="text", class="form-control", placeholder="12/31/16")
+            .col-sm-2
+              .form-group
+                label End Time
+                input(type="text", class="form-control", placeholder="12/31/16")
+            .col-sm-2
+              .form-group
+                label Sent/Received
+                select.form-control
+                  option Sent
+                  option Received
+            .col-sm-2
+              .form-group.form-button
+                button.btn.btn-primary.btn-block Search
+        table
+          thead: tr
+            td Date
+            td ID
+            td Direction
+            td From
+            td To
+            td Status
+          tbody
+            tr
+              td 5/05/15
+              td 000234
+              td Incoming
+              td: a(href="#") 2394872334
+              td: a(href="#") 2394872334
+              td: .tag-error Error
+            tr
+              td 5/05/15
+              td 000234
+              td Incoming
+              td: a(href="#") 2394872334
+              td: a(href="#") 2394872334
+              td: .tag-ok OK
+            tr
+              td 5/05/15
+              td 000234
+              td Incoming
+              td: a(href="#") 2394872334
+              td: a(href="#") 2394872334
+              td: .tag-pending Pending
+
+
+  //- Loaders and Spinners
+  br
+  br
+  .container
+    
+    h4 Simple Spinner
+    .spinner
+    
+    h4 Loading Button
+    .btn.btn-primary.btn-spinner 
+      .spinner
+      | Saving
+
+  br
+  br
+
+  .container: .text-center
+    ul.pagination
+      li.disabled: a(href='#', aria-label='Previous')
+          span(aria-hidden='true') ←
+      li.active: a(href='#') 1
+      li: a(href='#') 2
+      li: a(href='#') 3
+      li: a(href='#') 4
+      li: a(href='#') 5
+      li: a(href='#', aria-label='Next')
+          span(aria-hidden='true') →

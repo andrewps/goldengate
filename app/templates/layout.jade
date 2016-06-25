@@ -1,0 +1,36 @@
+head
+  title Andrew Sass &ndash;&nbsp;Product Director
+  meta(name='viewport', content='initial-scale=1, maximum-scale=1')
+  meta(http-equiv="X-UA-Compatible" content="IE=10; IE=9; IE=8; IE=7; IE=EDGE")
+  link(rel='icon', type='image/png', sizes='192x192', href='#{STATIC_URL}images/favicon/android-icon-192x192.png')   
+  link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css')
+  link(rel='stylesheet', href='#{STATIC_URL}css/main.css')
+body
+  include includes/_header
+  include includes/_modals
+  
+  block header
+    header
+      .container: .row
+        .col-sm-8
+          block header-title
+            h1 SMS & MMS API
+        .col-sm-4.text-right 
+          block header-button
+            a.btn.btn-primary.btn-ghost + Purchase a Number
+
+  .container
+
+    block content
+
+    block footer
+      footer
+        span.copyright © Copyright 2016
+        b Vivial
+  script(src='#{STATIC_URL}js/jquery.js')
+  script(src='#{STATIC_URL}js/bootstrap.js')
+  script.
+    // Toggle all tooltips within app
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })

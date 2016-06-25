@@ -1,0 +1,70 @@
+extends ../../layout
+
+block nav-numbers
+  li.active: a(href='/numbers') Numbers
+
+block header-title
+  h1 Purchase A Number
+block header-button
+
+block content
+
+  .card
+    p.lead Search for numbers and characters you would like to include in your phone number
+    form#searchPhoneNumbers
+      .row
+        .col-sm-3
+          .form-group
+            input(class="form-control" type="text" placeholder="555-555-5555")
+        .col-sm-7
+          span.radio
+            input(id="beginsWith" type="radio")
+            label(for="beginsWith") begins with
+          span.radio
+            input(id="endsWith" type="radio")
+            label(for="endsWith") ends with
+          span.radio
+            input(id="foundAnywhere" type="radio")
+            label(for="foundAnywhere") found anywhere 
+        .col-sm-2
+          button.btn.btn-primary.btn-block Search
+    hr
+     
+    table
+      thead: tr
+        td Number
+        td Type
+        td Location
+        td Price
+        td
+      tbody
+        tr
+          td: a(href="#") +1 (212) 456-7870
+          td Local
+          td New York, NY
+          td: b.text-green $1.00
+          td.text-right: a(href="#" class="btn btn-primary", data-target='#modalBuyNumber', data-toggle='modal') Buy
+        tr
+          td: a(href="#") +1 (212) 456-7870
+          td Local
+          td New York, NY
+          td: b.text-green $1.00
+          td.text-right: a(href="#" class="btn btn-primary", data-target='#modalBuyNumber', data-toggle='modal') Buy
+        tr
+          td: a(href="#") +1 (212) 456-7870
+          td Local
+          td New York, NY
+          td: b.text-green $1.00
+          td.text-right: a(href="#" class="btn btn-primary", data-target='#modalBuyNumber', data-toggle='modal') Buy
+        tr
+          td: a(href="#") +1 (212) 456-7870
+          td Local
+          td New York, NY
+          td: b.text-green $1.00
+          td.text-right: a(href="#" class="btn btn-primary", data-target='#modalBuyNumber', data-toggle='modal') Buy
+        tr
+          td: a(href="#") +1 (212) 456-7870
+          td Local
+          td New York, NY
+          td: b.text-green $1.00
+          td.text-right: a(href="#" class="btn btn-primary", data-target='#modalBuyNumber', data-toggle='modal') Buy

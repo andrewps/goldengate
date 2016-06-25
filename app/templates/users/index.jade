@@ -1,0 +1,40 @@
+extends ../layout
+
+block header-title
+  h1 Users
+block header-button
+  a.btn.btn-primary.btn-ghost(data-target='#modalAddUsers', data-toggle='modal') + Add Users
+
+block content
+  .card
+    table
+      thead: tr
+        td Name
+        td Email
+        td Type
+        td 
+      tbody
+        tr
+          td Kamal Gupta
+          td: a(href="#") kamalgupta@localvox.com
+          td
+            select
+              option User
+              option Administrator
+          td.text-right: span(data-toggle="tooltip" title="Delete User"): a.btn.btn-danger.btn-ghost.btn-icon.btn-trash Delete
+        tr
+          td Kamal Gupta
+          td: a(href="#") kamalgupta@localvox.com
+          td
+            select
+              option User
+              option Administrator
+          td.text-right: span(data-toggle="tooltip" title="Delete User"): a.btn.btn-danger.btn-ghost.btn-icon.btn-trash Delete
+        tr
+          td Kamal Gupta
+          td: a(href="#") kamalgupta@localvox.com
+          td
+            select
+              option User
+              option Administrator
+          td.text-right: span(data-toggle="tooltip" title="Delete User"): a.btn.btn-danger.btn-ghost.btn-icon.btn-trash Delete

@@ -1,0 +1,188 @@
+
+<head>
+  <title>Andrew Sass &ndash;&nbsp;Product Director</title>
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=10; IE=9; IE=8; IE=7; IE=EDGE"/>
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/images/favicon/android-icon-192x192.png"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css"/>
+  <link rel="stylesheet" href="/assets/css/main.css"/>
+</head>
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" class="navbar-toggle collapsed"><span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></span></button><a href="#" class="navbar-brand">Golden Gate</a>
+      </div>
+      <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="/">SMS/MMS</a></li>
+          <li class="active"><a href="/apps">Apps</a></li>
+          <li><a href="/numbers">Numbers</a></li>
+          <li><a href="/shortcodes">Short Codes</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="/help">Help & Docs</a></li>
+          <li class="dropdown"><a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle">Account<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="/account">Account Settings</a></li>
+              <li><a href="/profile">Profile</a></li>
+              <li><a href="/users">Users</a></li>
+              <li role="separator" class="divider">  </li>
+              <li><a href="#">Logout</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div id="modalAddUsers" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
+          <h4 id="myModalLabel" class="modal-title">Add New User</h4>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label>New User's Email</label>
+                  <input type="email" placeholder="Email" class="form-control"/>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label>Sub-Account Type</label>
+                  <select class="form-control">
+                    <option>None</option>
+                    <option>Type Option</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12"> 
+                <input type="radio" id="administrator"/>
+                <label for="administrator">Administrator  - Can access all features including inviting users and creating sub-accounts.</label>
+              </div>
+              <div class="col-sm-12">
+                <input type="radio" id="user"/>
+                <label for="user">User - Full access to APIs, but can not edit users or accounts</label>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer"><a class="btn btn-primary">Send Invitation</a><a class="btn btn-default">Cancel</a></div>
+      </div>
+    </div>
+  </div>
+  <div id="modalBuyNumber" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
+          <h4 id="myModalLabel" class="modal-title">Buy This Number?</h4>
+        </div>
+        <div class="modal-body">
+          <h1 class="text-center">+1 (212) 555-5555</h1>
+          <h1 class="text-center text-green">$1.00 / month</h1>
+        </div>
+        <div class="modal-footer">
+          <button type="button" data-dismiss="modal" class="btn btn-default">Close</button>
+          <button type="button" class="btn btn-primary">Buy This Number</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="modalEditNumber" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="modal fade">
+    <div role="document" class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
+          <h4 id="myModalLabel" class="modal-title">Edit Phone Number</h4>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="well text-center">
+                <h5>Number:</h5>
+                <h3 class="text-green">(212) 456-7890</h3>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="well text-center">
+                <h5>Location:</h5>
+                <h3 class="text-green">New York, NY</h3>
+              </div>
+            </div>
+          </div>
+          <form>
+            <div class="form-group">
+              <label>Phone Number</label>
+              <input type="text" placeholder="Phone Number" value="(212) 456-7890" class="form-control"/>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label>Callback ID</label>
+                  <input type="text" placeholder="Callback ID" class="form-control"/>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label>Fallback ID</label>
+                  <input type="text" placeholder="Fallback ID" class="form-control"/>
+                </div>
+              </div>
+            </div>
+            <div class="well danger">
+              <h3>Release Number</h3>
+              <p>Warning text that explains what releasing a number means</p><a href="#" class="btn btn-danger">Release Number</a>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" data-dismiss="modal" class="btn btn-default">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <header>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8">
+          <h1>Applications</h1>
+        </div>
+        <div class="col-sm-4 text-right"> 
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="container">
+    <div class="card">
+      <p class="lead">Applications all you to share a configuration across many numbers</p>
+      <form id="searchApps">
+        <div class="form-group">
+          <label>Search Applications     </label>
+          <div class="input-group">
+            <input type="text" placeholder="Search Applications" class="form-control"/>
+            <div class="input-group-btn">
+              <button type="button" class="btn btn-primary">Search</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <footer><span class="copyright">© Copyright 2016</span><b>Vivial</b></footer>
+  </div>
+  <script src="/assets/js/jquery.js"></script>
+  <script src="/assets/js/bootstrap.js"></script>
+  <script>
+    // Toggle all tooltips within app
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+  </script>
+</body>
