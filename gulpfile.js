@@ -8,8 +8,23 @@ var less         = require('gulp-less');
 var path         = require('path');
 var del          = require('del');
 var runSequence  = require('run-sequence');
-var deploy       = require('gulp-gh-pages');
+var fs           = require("fs");
+var awspublish   = require('gulp-awspublish');
 var _            = require('lodash');
+
+
+var publisher = awspublish.create({
+  region: 'eu-west-1',
+  params: {
+    Bucket: 'sassgg'
+  },
+  accessKeyId: 'AKIAIRVYI5GXMXHK5LHQ',
+  secretAccessKey: '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'
+});
+
+
+// var aws = JSON.parse(fs.readFileSync('./aws.json')); // reading aws config file
+// var publisher = awspublish.create(aws);
 
 
 // Start browserSync server
@@ -22,7 +37,7 @@ gulp.task('browserSync', function() {
 
 // LESS
 gulp.task('less', function() {
-  return gulp.src('app/less/**/*.less')
+  return gulp.src('app/less/main.less')
     .pipe(less()) // Passes it through a gulp-sass
     .pipe(autoprefixer('last 10 versions', 'ie 9')) // autoprefixer
     .pipe(gulp.dest('dist/assets/css')) // Outputs it in the css folder
@@ -39,11 +54,11 @@ gulp.task('js', function() {
 });
 
 // Root
-gulp.task('root', function() {
-  return gulp
-    .src(['app/CNAME', 'app/images/favicon/favicon.ico*'])
-    .pipe( gulp.dest('dist/') );
-});
+// gulp.task('root', function() {
+//   return gulp
+//     .src(['app/CNAME', 'app/images/favicon/favicon.ico*'])
+//     .pipe( gulp.dest('dist/') );
+// });
 
 // Templates
 gulp.task('templates', function() {    
@@ -85,11 +100,22 @@ gulp.task('clean:dist', function(callback) {
   });
 });
 
-// Deploy to Github Pages
+// Deploy to s3
+
+var headers = { 'Cache-Control': 'max-age=315360000, no-transform, public' };
+
 gulp.task('deploy', function () {
   return gulp.src("dist/**/*")
-    .pipe(deploy())
+    .pipe(publisher.publish())
+    .pipe(publisher.sync())
+    .pipe(awspublish.reporter());
 });
+
+
+
+
+
+
 
 
 
@@ -110,8 +136,9 @@ gulp.task('default', function(callback) {
 gulp.task('publish', function(callback) {
   runSequence(
     'clean:dist',
-    ['js', 'less', 'images', 'root', 'templates'],
+    ['js', 'less', 'images', 'templates'],
     'deploy',
     callback
   )
+    
 });

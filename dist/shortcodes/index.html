@@ -1,6 +1,6 @@
 
 <head>
-  <title>Andrew Sass &ndash;&nbsp;Product Director</title>
+  <title>Golden Gate</title>
   <meta name="viewport" content="initial-scale=1, maximum-scale=1"/>
   <meta http-equiv="X-UA-Compatible" content="IE=10; IE=9; IE=8; IE=7; IE=EDGE"/>
   <link rel="icon" type="image/png" sizes="192x192" href="/assets/images/favicon/android-icon-192x192.png"/>
@@ -35,6 +35,97 @@
       </div>
     </div>
   </nav>
+  <div id="modalCreateNewApplication" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
+          <h4 class="modal-title">Create New Application</h4>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label>Name</label>
+              <input type="text" placeholder="Name your application" class="form-control"/>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label>Callback URL</label>
+                  <input type="text" placeholder="Callback URL" class="form-control"/>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label>Fallback URL</label>
+                  <input type="text" placeholder="Fallback URL" class="form-control"/>
+                </div>
+              </div>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox"/>Accept incoming messages
+              </label>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer"><a type="button" data-dismiss="modal" class="btn btn-default">Cancel</a><a type="button" class="btn btn-primary">Create Application</a></div>
+      </div>
+    </div>
+  </div>
+  <div id="modalEditApplication" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
+          <h4 class="modal-title">Edit Application</h4>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label>Name</label>
+                  <input type="text" placeholder="Name" class="form-control"/>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label>ID</label>
+                  <input type="text" placeholder="ID" readonly="readonly" class="form-control"/>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label>Callback URL</label>
+                  <input type="text" placeholder="Callback URL" class="form-control"/>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label>Fallback URL</label>
+                  <input type="text" placeholder="Fallback URL" class="form-control"/>
+                </div>
+              </div>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox"/>Accept incoming messages
+              </label>
+            </div>
+            <div class="well danger">
+              <h3>Delete Application</h3>
+              <p>Warning text that explains what deleteing an application means</p>
+              <button class="btn btn-danger">Delete Application</button>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer"><a type="button" data-dismiss="modal" class="btn btn-default">Cancel</a><a type="button" class="btn btn-primary">Save Application</a></div>
+      </div>
+    </div>
+  </div>
   <div id="modalAddUsers" class="modal fade">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -73,7 +164,7 @@
             </div>
           </form>
         </div>
-        <div class="modal-footer"><a class="btn btn-primary">Send Invitation</a><a class="btn btn-default">Cancel</a></div>
+        <div class="modal-footer"><a type="button" data-dismiss="modal" class="btn btn-default">Cancel</a><a type="button" class="btn btn-primary">Send Invitation</a></div>
       </div>
     </div>
   </div>
@@ -161,7 +252,19 @@
     </div>
   </header>
   <div class="container">
-    <footer><span class="copyright">© Copyright 2016</span><b>Vivial</b></footer>
+    <footer>
+      <div class="col-sm-6">
+        <div class="copyright"> <span>© Copyright 2016</span><b>Vivial Inc.</b></div>
+      </div>
+      <div class="col-sm-6">
+        <ul class="list-inline text-right footer-links">
+          <li><a href="#">Terms of Service </a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Support</a></li>
+          <li><a href="#">Features</a></li>
+        </ul>
+      </div>
+    </footer>
   </div>
   <script src="/assets/js/jquery.js"></script>
   <script src="/assets/js/bootstrap.js"></script>

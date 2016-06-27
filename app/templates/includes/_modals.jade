@@ -1,3 +1,71 @@
+//- Create New Application
+#modalCreateNewApplication.modal.fade
+  .modal-dialog
+    .modal-content
+      .modal-header
+        button.close(type='button', data-dismiss='modal', aria-label='Close')
+          span(aria-hidden='true') ×
+        h4.modal-title Create New Application
+      .modal-body
+        form
+          .form-group
+            label Name
+            input(type='text', placeholder='Name your application', class='form-control')
+          .row
+            .col-sm-6: .form-group
+              label Callback URL
+              input(type='text', placeholder='Callback URL', class='form-control')
+            .col-sm-6: .form-group
+              label Fallback URL
+              input(type='text', placeholder='Fallback URL', class='form-control')
+          .checkbox
+            label
+              input(type="checkbox") 
+              | Accept incoming messages
+
+      .modal-footer
+        a.btn.btn-default(type='button', data-dismiss='modal') Cancel
+        a.btn.btn-primary(type='button') Create Application
+        
+
+//- Edit Application
+#modalEditApplication.modal.fade
+  .modal-dialog
+    .modal-content
+      .modal-header
+        button.close(type='button', data-dismiss='modal', aria-label='Close')
+          span(aria-hidden='true') ×
+        h4.modal-title Edit Application
+      .modal-body
+        form
+          .row
+            .col-sm-6: .form-group
+              label Name
+              input(type='text', placeholder='Name', class='form-control')
+            .col-sm-6: .form-group
+              label ID
+              input(type='text', placeholder='ID', class='form-control' readonly)
+          .row
+            .col-sm-6: .form-group
+              label Callback URL
+              input(type='text', placeholder='Callback URL', class='form-control')
+            .col-sm-6: .form-group
+              label Fallback URL
+              input(type='text', placeholder='Fallback URL', class='form-control')
+          .checkbox
+            label
+              input(type="checkbox") 
+              | Accept incoming messages
+          .well.danger
+            h3 Delete Application
+            p Warning text that explains what deleteing an application means
+            button.btn.btn-danger Delete Application
+      .modal-footer
+        a.btn.btn-default(type='button', data-dismiss='modal') Cancel
+        a.btn.btn-primary(type='button') Save Application
+        
+
+
 //- Add Users Modal
 #modalAddUsers.modal.fade
   .modal-dialog
@@ -27,8 +95,8 @@
               input(type="radio" id="user")
               label(for="user") User - Full access to APIs, but can not edit users or accounts
       .modal-footer
-        a.btn.btn-primary Send Invitation
-        a.btn.btn-default Cancel
+        a.btn.btn-default(type='button', data-dismiss='modal') Cancel
+        a.btn.btn-primary(type='button') Send Invitation
         
 
 //- Buy Number Modal

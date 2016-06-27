@@ -19,8 +19,11 @@
     "start-dev": "NODE_ENV=development gulp && gulp watch"
   },
   "devDependencies": {
+    "fs": "0.0.2",
     "gulp-autoprefixer": "^3.1.0",
+    "gulp-awspublish": "^3.2.0",
     "gulp-gh-pages": "^0.5.4",
+    "gulp-s3": "^0.3.0",
     "run-sequence": "^1.2.1"
   }
 }

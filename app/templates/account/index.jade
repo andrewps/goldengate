@@ -5,3 +5,61 @@ block header-title
 block header-button
 
 block content
+  .card
+    .alert.alert-danger(role="alert") 
+      .text-center
+        i.icon-danger
+        span You are currently on a Free Trial Account which expires in 12 days. 
+        a(href="#") Upgrade Today
+    .row
+      .col-sm-6
+        h3 Account Name
+        hr
+        form
+          .form-group
+            input(type="text", placeholder="Account Name", class="form-control")
+          button.btn.btn-primary.btn-lg Save Account Name
+      .col-sm-6
+        h3 API Authentication
+        hr
+        table
+          tr
+            td Account
+            td: code 123456789
+          tr
+            td API Key
+            td: code ef46ceff50ea5d0210e3d478a88e35d4
+        button.btn.btn-primary.btn-lg Generate New Key
+    .row
+      .col-sm-12
+        h3 Sub Accounts
+        hr
+        p.lead Manage your sub accounts via our REST API.
+        table
+          thead
+            tr
+              td Name
+              td Owner Profile
+              td
+          tbody
+            tr
+              td Sub Account One
+              td: a(href="#") admin@sub.domain.com
+              TD: a(href="#").btn.btn-grey.btn-ghost.btn-sm View Sub-Account
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

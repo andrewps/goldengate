@@ -6,6 +6,7 @@ block nav-apps
 block header-title
   h1 Applications
 block header-button
+  a.btn.btn-primary.btn-ghost(data-target="#modalCreateNewApplication", data-toggle="modal") + Create Application
 
 block content
 
@@ -25,3 +26,45 @@ block content
           input(type="text", class="form-control", placeholder="Search Applications")
           .input-group-btn
             button.btn.btn-primary(type="button") Search
+
+    table
+      thead
+        tr
+          td Application
+          td ID
+          td Callback URL
+          td Fallback URL
+          td
+      tbody
+        tr
+          td: a(href="#") MyApplication
+          td 2983329874
+          td https://www.domain.com/asefasdf
+          td https://www2.domain.com/asefasdf
+          td.text-right: span(data-toggle="tooltip" title="Edit Application"): button.btn.btn-primary.btn-ghost.btn-icon.btn-edit(type='button' data-toggle='modal' data-target='#modalEditApplication') Edit
+        tr
+          td: a(href="#") MyApplication
+          td 2983329874
+          td https://www.domain.com/asefasdf
+          td https://www2.domain.com/asefasdf
+          td.text-right: span(data-toggle="tooltip" title="Edit Application"): button.btn.btn-primary.btn-ghost.btn-icon.btn-edit(type='button' data-toggle='modal' data-target='#modalEditApplication') Edit
+        tr
+          td: a(href="#") MyApplication
+          td 2983329874
+          td https://www.domain.com/asefasdf
+          td https://www2.domain.com/asefasdf
+          td.text-right: span(data-toggle="tooltip" title="Edit Application"): button.btn.btn-primary.btn-ghost.btn-icon.btn-edit(type='button' data-toggle='modal' data-target='#modalEditApplication') Edit
+        tr
+          td: a(href="#") MyApplication
+          td 2983329874
+          td https://www.domain.com/asefasdf
+          td https://www2.domain.com/asefasdf
+          td.text-right: span(data-toggle="tooltip" title="Edit Application"): button.btn.btn-primary.btn-ghost.btn-icon.btn-edit(type='button' data-toggle='modal' data-target='#modalEditApplication') Edit
+        tr
+          td: a(href="#") MyApplication
+          td 2983329874
+          td https://www.domain.com/asefasdf
+          td https://www2.domain.com/asefasdf
+          td.text-right: span(data-toggle="tooltip" title="Edit Application"): button.btn.btn-primary.btn-ghost.btn-icon.btn-edit(type='button' data-toggle='modal' data-target='#modalEditApplication') Edit
+
+

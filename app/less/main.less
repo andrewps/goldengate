@@ -1,3 +1,7 @@
+
+
+
+
 /** Fonts **/
 
 @import "https://fonts.googleapis.com/css?family=Montserrat:400,700|Merriweather:400,400italic,700,700italic&subset=latin,latin-ext";
@@ -83,6 +87,31 @@ hr {
   border-color: @borders;
 }
 
+code {
+  background-color: @green;
+  color: @white;
+}
+
+.alert {
+  border: none;
+  .icon-danger {
+    display: inline-block;
+    background-image: url('/assets/images/icon-alert.png');
+    background-position: 0 0;
+    background-size: 100%;
+    width: 12px;
+    height: 12px;
+    margin-right: 5px;
+  }
+  &.alert-danger {
+    background-color: @red;
+    color: @white;
+  }
+  a {
+    color: @white;
+    font-weight: bold;
+  }
+}
 
 /** Forms & Inputs **/
 form {
@@ -148,7 +177,7 @@ select,
 select.form-control {
   position: relative;
   background: none;
-  background-image: url("https://s3-us-west-2.amazonaws.com/sassgg/icon-select.png");
+  background-image: url("/assets/images/icon-select.png");
   background-position: 95% 50%;
   background-repeat: no-repeat;
   appearance: none;
@@ -261,16 +290,21 @@ select:before {
   border-color: @red;
   color: @red;
 }
+.btn.btn-grey.btn-ghost {
+  background-color: transparent;
+  border-color: @borders;
+  color: @darkgrey;
+}
 .btn-icon {
   min-width: 40px;
   text-indent: -9999px;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   &.btn-edit {
-    background-image: url(https://s3-us-west-2.amazonaws.com/sassgg/icon-edit.png)
+    background-image: url(/assets/images/icon-edit.png)
   }
   &.btn-trash {
-    background-image: url(https://s3-us-west-2.amazonaws.com/sassgg/icon-trash.png)
+    background-image: url(/assets/images/icon-trash.png)
   }
 }
 
@@ -304,6 +338,7 @@ nav.navbar.navbar-default {
     }
     li {
       a {
+        font-weight: bold;
         text-transform: uppercase;
         color: @darkgrey;
         &:hover {
@@ -349,7 +384,7 @@ header {
   background: @white;
   color: @green;
   margin-bottom: 40px;
-  padding-bottom: 40px;
+  padding-bottom: 30px;
   h1 {
     color: @green;
     margin: 25px 0 0 0;
@@ -614,7 +649,7 @@ ul.pagination {
 
 
 
-// PAGES
+/** Pages **/
 
 a.sms-link {
   display: block;
@@ -625,16 +660,18 @@ a.sms-link {
   border-radius: 2px;
   border: 1px solid @borders;
   h4 {
+    font-weight: bold;
+    margin-bottom: 0;
     color: @black;
   }
   p {
     color: @darkgrey;
   }
   &.link-numbers {
-    background-image: url("https://s3-us-west-2.amazonaws.com/sassgg/icon-numbers.png");
+    background-image: url("/assets/images/icon-numbers.png");
   }
   &.link-help {
-    background-image: url("https://s3-us-west-2.amazonaws.com/sassgg/icon-docs.png");
+    background-image: url("/assets/images/icon-docs.png");
   }
   &:hover {
     text-decoration: none;
@@ -660,3 +697,13 @@ form#searchPhoneNumbers {
     margin-left: 15px;
   }
 }
+
+
+
+
+@import "footer";
+
+
+
+
+

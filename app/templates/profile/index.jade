@@ -5,3 +5,42 @@ block header-title
 block header-button
 
 block content
+  .card
+    .alert.alert-danger(role="alert") 
+      .text-center
+        i.icon-danger
+        span You are currently on a Free Trial Account which expires in 12 days. 
+        a(href="#") Upgrade Today
+    .row
+      .col-sm-6
+        h3 Profile
+        hr
+        form
+          .row
+            .col-sm-6: .form-group
+              label First Name
+              input(type="text", placeholder="First Name", class="form-control")
+            .col-sm-6: .form-group
+              label Last Name
+              input(type="text", placeholder="Last Name", class="form-control")
+          .form-group
+            label Email
+            input(type="email", placeholder="Email", class="form-control")
+          button.btn.btn-primary.btn-lg Save Profile
+      .col-sm-6
+        h3 Profile
+        hr
+        form
+          .form-group
+            label Current Password
+            input(type="password", placeholder="Current Password", class="form-control")
+          .form-group
+            label New Password
+            input(type="password", placeholder="New Password", class="form-control")
+          .form-group
+            label Retype New Password
+            input(type="password", placeholder="Retype New Password", class="form-control")
+          button.btn.btn-primary.btn-lg Update Password
+
+
+

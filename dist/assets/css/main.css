@@ -58,6 +58,30 @@ a:hover {
 hr {
   border-color: #CDCDCD;
 }
+code {
+  background-color: #24D235;
+  color: #FFFFFF;
+}
+.alert {
+  border: none;
+}
+.alert .icon-danger {
+  display: inline-block;
+  background-image: url('/assets/images/icon-alert.png');
+  background-position: 0 0;
+  background-size: 100%;
+  width: 12px;
+  height: 12px;
+  margin-right: 5px;
+}
+.alert.alert-danger {
+  background-color: #F34C4C;
+  color: #FFFFFF;
+}
+.alert a {
+  color: #FFFFFF;
+  font-weight: bold;
+}
 /** Forms & Inputs **/
 form .form-group label {
   color: #676767;
@@ -118,7 +142,7 @@ select,
 select.form-control {
   position: relative;
   background: none;
-  background-image: url("https://s3-us-west-2.amazonaws.com/sassgg/icon-select.png");
+  background-image: url("/assets/images/icon-select.png");
   background-position: 95% 50%;
   background-repeat: no-repeat;
   -webkit-appearance: none;
@@ -245,6 +269,11 @@ select:before {
   border-color: #F34C4C;
   color: #F34C4C;
 }
+.btn.btn-grey.btn-ghost {
+  background-color: transparent;
+  border-color: #CDCDCD;
+  color: #676767;
+}
 .btn-icon {
   min-width: 40px;
   text-indent: -9999px;
@@ -252,10 +281,10 @@ select:before {
   background-position: 50% 50%;
 }
 .btn-icon.btn-edit {
-  background-image: url(https://s3-us-west-2.amazonaws.com/sassgg/icon-edit.png);
+  background-image: url(/assets/images/icon-edit.png);
 }
 .btn-icon.btn-trash {
-  background-image: url(https://s3-us-west-2.amazonaws.com/sassgg/icon-trash.png);
+  background-image: url(/assets/images/icon-trash.png);
 }
 /** Cards **/
 .card {
@@ -282,6 +311,7 @@ nav.navbar.navbar-default ul.nav.navbar-nav .dropdown.open a {
   color: #FFFFFF;
 }
 nav.navbar.navbar-default ul.nav.navbar-nav li a {
+  font-weight: bold;
   text-transform: uppercase;
   color: #676767;
 }
@@ -309,7 +339,7 @@ header {
   background: #FFFFFF;
   color: #24D235;
   margin-bottom: 40px;
-  padding-bottom: 40px;
+  padding-bottom: 30px;
 }
 header h1 {
   color: #24D235;
@@ -512,6 +542,7 @@ ul.pagination li.active a:hover {
   border-color: rgba(255, 255, 255, 0.5);
   border-top-color: #FFFFFF;
 }
+/** Pages **/
 a.sms-link {
   display: block;
   padding: 10px 60px 10px 10px;
@@ -523,16 +554,18 @@ a.sms-link {
   border: 1px solid #CDCDCD;
 }
 a.sms-link h4 {
+  font-weight: bold;
+  margin-bottom: 0;
   color: #000000;
 }
 a.sms-link p {
   color: #676767;
 }
 a.sms-link.link-numbers {
-  background-image: url("https://s3-us-west-2.amazonaws.com/sassgg/icon-numbers.png");
+  background-image: url("/assets/images/icon-numbers.png");
 }
 a.sms-link.link-help {
-  background-image: url("https://s3-us-west-2.amazonaws.com/sassgg/icon-docs.png");
+  background-image: url("/assets/images/icon-docs.png");
 }
 a.sms-link:hover {
   text-decoration: none;
@@ -546,4 +579,21 @@ a.sms-link:hover {
 form#searchPhoneNumbers span.radio {
   display: inline-block;
   margin-left: 15px;
+}
+footer {
+  margin: 40px 0;
+  padding: 20px 0;
+  border-top: 1px solid #CDCDCD;
+}
+footer .copyright {
+  color: #676767;
+}
+footer .copyright span {
+  margin-right: 10px;
+}
+footer ul.footer-links {
+  margin: 0;
+}
+footer ul.footer-links a {
+  color: #676767;
 }
