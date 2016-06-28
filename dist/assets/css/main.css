@@ -1,6 +1,5 @@
 /** Global **/
 /** Fonts **/
-@import "https://fonts.googleapis.com/css?family=Montserrat:400,700|Merriweather:400,400italic,700,700italic&subset=latin,latin-ext";
 /** Colors **/
 /** Global UI **/
 body {
@@ -164,6 +163,31 @@ form .form-group:-ms-input-placeholder {
 }
 form .form-group:-moz-placeholder {
   color: #EBEBEB;
+}
+form label.required:after {
+  display: inline-block;
+  margin-left: 5px;
+  content: "*";
+}
+form .has-error {
+  color: #F34C4C;
+}
+form .has-error label {
+  color: #F34C4C;
+}
+form .has-error .form-control {
+  border-color: #F34C4C !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+form .has-error .form-control:focus,
+form .has-error .form-control:active {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+form .has-error .help-block,
+form .has-error .checkbox {
+  color: #F34C4C;
 }
 .radio {
   display: block;

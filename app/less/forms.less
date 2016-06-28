@@ -33,6 +33,31 @@ form {
       color: @grey;
     }
   }
+  label.required {
+    &:after {
+      display: inline-block;
+      margin-left: 5px;
+      content: "*";
+    }
+  }
+  .has-error {
+    label {
+      color: @red;
+    }
+    color: @red;
+    .form-control {
+      border-color: @red !important;
+      box-shadow: none !important;
+      &:focus, &:active {
+        box-shadow: none !important;
+      }
+    }
+    .help-block,
+    .checkbox {
+      color: @red;  
+    }
+    
+  }
 }
 
 .radio {

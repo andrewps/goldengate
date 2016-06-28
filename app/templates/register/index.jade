@@ -15,25 +15,27 @@ block content
           .row
             .col-sm-6
               .form-group
-                label First Name
+                label.required First Name
                 input(type="text", placeholder="First Name", class="form-control")
             .col-sm-6
               .form-group
-                label Last Name
+                label.required Last Name
                 input(type="text", placeholder="Last Name", class="form-control")
           .row
             .col-sm-12
-              .form-group
-                label Email
+              .form-group.has-error
+                label.required Email
                 input(type="email", placeholder="Email", class="form-control")
+                span(id="helpBlock" class="help-block") Please include a verified email address!
+
           .row
             .col-sm-6
               .form-group
-                label Password
+                label.required Password
                 input(type="password", placeholder="Password", class="form-control")
             .col-sm-6
               .form-group
-                label Password (again)
+                label.required Password (again)
                 input(type="password", placeholder="Password", class="form-control")
           .row
             .col-sm-6
@@ -51,10 +53,19 @@ block content
                 textarea(placeholder="Intended Usage", class="form-control")
           .row
             .col-sm-12
-              input(type="checkbox")
-              label I accept the Terms of Service
+              //- input(type="checkbox")
+              //- label I accept the Terms of Service
+              .has-error
+                .checkbox
+                  label.required
+                    input(type="checkbox", id="checkboxError", value="option1")
+                    | I accept the Terms of Service
+                span(class="help-block") You must agree to these terms!!
           hr
           .row
             .col-sm-12.auth-footer
               button.btn.btn-primary.btn-lg Login
               a(href="#") Forgot Your Password?
+
+
+              
