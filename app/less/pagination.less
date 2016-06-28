@@ -1,0 +1,22 @@
+ul.pagination {
+  li {
+    a {
+      color: @darkgrey;
+      &:hover {
+        color: @black;
+        background-color: @white;
+      }
+    }
+    &.disabled {
+      a, a:hover {
+        color: @grey;    
+      }            
+    }
+    &.active {
+      a, a:hover {
+        border-color: @darkgrey;
+        background-color: @darkgrey;  
+      }        
+    }
+  }
+}

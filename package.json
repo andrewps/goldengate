@@ -19,11 +19,14 @@
     "start-dev": "NODE_ENV=development gulp && gulp watch"
   },
   "devDependencies": {
+    "del": "^2.2.1",
     "fs": "0.0.2",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-awspublish": "^3.2.0",
     "gulp-gh-pages": "^0.5.4",
+    "gulp-less": "^3.1.0",
     "gulp-s3": "^0.3.0",
+    "lodash": "^4.13.1",
     "run-sequence": "^1.2.1"
   }
 }

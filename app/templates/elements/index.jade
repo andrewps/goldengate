@@ -1,0 +1,44 @@
+extends ../layout
+
+block header-title
+  h1 Sample UI Elements
+block header-button
+
+block content
+
+  //- Loaders and Spinners
+  br
+  br
+  .card    
+    h2 Simple Spinner
+    hr
+    .spinner
+    
+    br
+    br
+      
+    h2 Loading Button
+    hr
+    .btn.btn-primary.btn-spinner 
+      .spinner
+      | Saving
+    
+    br
+    br
+
+    h2 Pagination
+    hr
+    .text-center
+      ul.pagination
+        li.disabled: a(href='#', aria-label='Previous')
+            span(aria-hidden='true') ←
+        li.active: a(href='#') 1
+        li: a(href='#') 2
+        li: a(href='#') 3
+        li: a(href='#') 4
+        li: a(href='#') 5
+        li: a(href='#', aria-label='Next')
+            span(aria-hidden='true') →
+
+  br
+  br

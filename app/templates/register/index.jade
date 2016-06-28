@@ -1,0 +1,60 @@
+extends ../layout
+
+block header
+
+block content
+  .page-push-top
+    .col-sm-8.col-centered
+      .card
+        h1 Get Started For Free
+        p 
+          | Already have an account? 
+          a(href="/login") Login Here
+        hr
+        form
+          .row
+            .col-sm-6
+              .form-group
+                label First Name
+                input(type="text", placeholder="First Name", class="form-control")
+            .col-sm-6
+              .form-group
+                label Last Name
+                input(type="text", placeholder="Last Name", class="form-control")
+          .row
+            .col-sm-12
+              .form-group
+                label Email
+                input(type="email", placeholder="Email", class="form-control")
+          .row
+            .col-sm-6
+              .form-group
+                label Password
+                input(type="password", placeholder="Password", class="form-control")
+            .col-sm-6
+              .form-group
+                label Password (again)
+                input(type="password", placeholder="Password", class="form-control")
+          .row
+            .col-sm-6
+              .form-group
+                label Company Name (optional)
+                input(type="text", placeholder="Company Name", class="form-control")
+            .col-sm-6
+              .form-group
+                label Phone Number (optional)
+                input(type="password", placeholder="Phone Number", class="form-control")
+          .row
+            .col-sm-12
+              .form-group
+                label Intended Usage (optional)
+                textarea(placeholder="Intended Usage", class="form-control")
+          .row
+            .col-sm-12
+              input(type="checkbox")
+              label I accept the Terms of Service
+          hr
+          .row
+            .col-sm-12.auth-footer
+              button.btn.btn-primary.btn-lg Login
+              a(href="#") Forgot Your Password?

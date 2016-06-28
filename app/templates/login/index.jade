@@ -1,0 +1,34 @@
+extends ../layout
+
+block header
+
+block content
+  .page-push-top
+    .row
+      .col-sm-8.col-centered
+        .card
+          h1 Login to your account
+          p 
+            | Don't have an account? 
+            a(href="/register") Register Now
+          hr
+          form
+            .row
+              .col-sm-12
+                .form-group
+                  label Account ID
+                  input(type="text", placeholder="Account ID", class="form-control")
+            .row
+              .col-sm-6
+                .form-group
+                  label Username
+                  input(type="text", placeholder="Username", class="form-control")
+              .col-sm-6
+                .form-group
+                  label Password
+                  input(type="password", placeholder="Password", class="form-control")
+            hr
+            .row
+              .col-sm-12.auth-footer
+                button.btn.btn-primary.btn-lg Login
+                a(href="#") Forgot Your Password?

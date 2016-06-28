@@ -1,0 +1,30 @@
+table {
+  width: 100%;
+  thead {
+    font-weight: bold;
+    background: @th;
+    border-bottom: solid 2px @borders;
+  }
+  td {
+    padding: 10px;
+    border-bottom: 1px solid @borders;
+  }
+}
+td.config {
+  span {
+    margin-right: 5px;
+  }
+}
+[class*="tag"] {
+  // text-decoration: underline;
+  font-weight: bold;  
+  background-color: transparent;
+  border: 1px solid @borders;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 0 5px;
+  border-radius: 2px;
+  font-size: 12px;
+  height: 28px;
+  line-height: 28px;
+}

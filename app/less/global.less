@@ -1,0 +1,139 @@
+/** Global UI **/
+
+body {
+  background: @background;
+  font-family: @sans;
+  color: @black;
+}
+h1 {
+  font-weight: bold;
+}
+h2 {
+  font-weight: bold;
+}
+h3 {
+  font-weight: normal;
+}
+h4 {
+  font-weight: normal;
+}
+h5 {
+  font-weight: normal;
+}
+h6 {
+  font-weight: normal;
+}
+a {
+  color: @green;
+  &:hover {
+    color: darken(@green, 5%);
+    text-decoration: underline;
+  }
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.text-green {
+  color: @green;
+}
+.well {
+  background: none;
+  box-shadow: none;
+  border: 1px solid @borders;
+  border-radius: 0;
+  h3 {
+    margin-top: 0;
+  }
+}
+.well.danger {
+  border-color: @red;
+}
+
+hr {
+  border-color: @borders;
+}
+
+code {
+  background-color: @green;
+  color: @white;
+}
+
+/** Cards **/
+
+.card {
+  padding: 20px;
+  background: white;
+  border: 1px solid @borders;
+  box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.1);
+}
+
+/** Alerts **/
+
+.alert {
+  border: none;
+  .icon-danger {
+    display: inline-block;
+    background-image: url('/assets/images/icon-alert.png');
+    background-position: 0 0;
+    background-size: 100%;
+    width: 12px;
+    height: 12px;
+    margin-right: 5px;
+  }
+  &.alert-danger {
+    background-color: @red;
+    color: @white;
+  }
+  a {
+    color: @white;
+    font-weight: bold;
+  }
+}
+
+/** Breadcrumbs **/
+
+ol.breadcrumb {
+  background: none;
+  margin: 20px 0 40px;
+  padding: 0;
+  li {
+    color: @black;
+    &:before {
+      color: @darkgrey;
+      content: "‣";
+    }
+    &:first-child {
+      &:before {
+        display: none;
+      }
+    }
+    a {
+      color: @darkgrey;
+    }
+    &.active {
+      font-weight: bold;
+      color: @black;
+    }
+  }
+}
+
+.page-push-top {
+  margin-top: 60px;
+}
+
+.col-centered {
+  float: none;
+  margin: 0 auto; 
+}
+
+.auth-footer {
+  .btn {
+    margin-right: 20px;
+  }
+  a {
+    color: @darkgrey;
+  }
+}

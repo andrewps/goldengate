@@ -1,0 +1,105 @@
+/** Buttons **/
+.btn {
+  border-radius: 2px;
+  border: none;
+  font-weight: normal;
+  border: 1px solid;
+}
+.btn.btn-primary {
+  background-color: @green;
+  color: @white;
+  border-color: transparent;
+  &:hover {
+    background-color: lighten(@green, 5%);
+  }
+  &:active {
+    background-color: darken(@green, 5%);
+    color: @white;
+    border-color: transparent;
+    outline: none;
+    box-shadow: none;
+  }
+  &:focus {
+    background-color: darken(@green, 5%);
+    color: @white;
+    border-color: transparent;
+    outline: none;
+    box-shadow: none;
+  }
+}
+.btn.btn-primary.btn-ghost {
+  background-color: transparent;
+  border-color: @green;
+  color: @green;
+}
+.btn.btn-default {
+  background-color: @grey;
+  color: @darkgrey;
+  border-color: @borders;
+  &:hover {
+    background-color: lighten(@grey, 5%);
+  }
+  &:active {
+    background-color: darken(@grey, 5%);
+    color: @darkgrey;
+    border-color: @borders;
+    outline: none;
+    box-shadow: none;
+  }
+  &:focus {
+    background-color: darken(@grey, 5%);
+    color: @darkgrey;
+    border-color: @borders;
+    outline: none;
+    box-shadow: none;
+  }
+}
+.btn.btn-default.btn-ghost {
+  background-color: transparent;
+  border-color: white;
+  color: @white;
+}
+.btn.btn-danger {
+  background-color: @red;
+  color: @white;
+  border-color: transparent;
+  &:hover {
+    background-color: lighten(@red, 5%);
+  }
+  &:active {
+    background-color: darken(@red, 5%);
+    color: @white;
+    border-color: transparent;
+    outline: none;
+    box-shadow: none;
+  }
+  &:focus {
+    background-color: darken(@red, 5%);
+    color: @white;
+    border-color: transparent;
+    outline: none;
+    box-shadow: none;
+  }
+}
+.btn.btn-danger.btn-ghost {
+  background-color: transparent;
+  border-color: @red;
+  color: @red;
+}
+.btn.btn-grey.btn-ghost {
+  background-color: transparent;
+  border-color: @borders;
+  color: @darkgrey;
+}
+.btn-icon {
+  min-width: 40px;
+  text-indent: -9999px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  &.btn-edit {
+    background-image: url(/assets/images/icon-edit.png)
+  }
+  &.btn-trash {
+    background-image: url(/assets/images/icon-trash.png)
+  }
+}
