@@ -10,15 +10,7 @@
   "author": "Glebcha",
   "license": "MIT",
   "homepage": "https://gist.github.com/glebcha/27310a9fe5af174de825",
-  "dependencies": {},
-  "scripts": {
-    "preinstall": "npm i -g react react-dom react-router@latest fbjs flux history@1.13.1 gulp gulp-rimraf gulp-cache gulp-size gulp-concat gulp-jade gulp-minify-css gulp-jshint gulp-less less-plugin-autoprefix gulp-base64 gulp-rename gulp-imagemin gulp-uglify gulp-notify browserify babelify babel-preset-es2015 babel-preset-react browser-sync event-stream vinyl-source-stream",
-    "postinstall": "npm link react react-dom react-router@latest fbjs flux history@1.13.1 gulp gulp-rimraf gulp-cache gulp-size gulp-concat gulp-jade gulp-minify-css gulp-jshint gulp-less less-plugin-autoprefix gulp-base64 gulp-rename gulp-imagemin gulp-uglify gulp-notify browserify babelify babel-preset-es2015 babel-preset-react browser-sync event-stream vinyl-source-stream",
-    "prepare": "npm run preinstall && npm run postinstall",
-    "start": "NODE_ENV=production gulp && gulp watch",
-    "start-dev": "NODE_ENV=development gulp && gulp watch"
-  },
-  "devDependencies": {
+  "dependencies": {
     "del": "^2.2.1",
     "fs": "0.0.2",
     "gulp-autoprefixer": "^3.1.0",
@@ -28,5 +20,13 @@
     "gulp-s3": "^0.3.0",
     "lodash": "^4.13.1",
     "run-sequence": "^1.2.1"
-  }
+  },
+  "scripts": {
+    "preinstall": "npm i -g react react-dom react-router@latest fbjs flux history@1.13.1 gulp gulp-rimraf gulp-cache gulp-size gulp-concat gulp-jade gulp-minify-css gulp-jshint gulp-less less-plugin-autoprefix gulp-base64 gulp-rename gulp-imagemin gulp-uglify gulp-notify browserify babelify babel-preset-es2015 babel-preset-react browser-sync event-stream vinyl-source-stream",
+    "postinstall": "npm link react react-dom react-router@latest fbjs flux history@1.13.1 gulp gulp-rimraf gulp-cache gulp-size gulp-concat gulp-jade gulp-minify-css gulp-jshint gulp-less less-plugin-autoprefix gulp-base64 gulp-rename gulp-imagemin gulp-uglify gulp-notify browserify babelify babel-preset-es2015 babel-preset-react browser-sync event-stream vinyl-source-stream",
+    "prepare": "npm run preinstall && npm run postinstall",
+    "start": "NODE_ENV=production gulp && gulp watch",
+    "start-dev": "NODE_ENV=development gulp && gulp watch"
+  },
+  "devDependencies": {}
 }
