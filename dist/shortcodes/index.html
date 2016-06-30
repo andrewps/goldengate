@@ -8,38 +8,66 @@
   <link rel="stylesheet" href="/assets/css/main.css"/>
 </head>
 <body>
-  <nav class="navbar navbar-default">
+  <div class="page">
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" class="navbar-toggle collapsed"><span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></span></button><a href="#" class="navbar-brand">Golden Gate</a>
+        </div>
+        <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/">SMS/MMS</a></li>
+            <li><a href="/apps">Apps</a></li>
+            <li><a href="/numbers">Numbers</a></li>
+            <li class="active"><a href="/shortcodes">Short Codes</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/help">Help & Docs</a></li>
+            <li class="dropdown"><a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle">Account<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="/account">Account Settings</a></li>
+                <li><a href="/profile">Profile</a></li>
+                <li><a href="/users">Users</a></li>
+                <li role="separator" class="divider">  </li>
+                <li><a href="#">Logout</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <header>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8">
+            <h1>Short Codes</h1>
+          </div>
+          <div class="col-sm-4 text-right"> 
+          </div>
+        </div>
+      </div>
+    </header>
     <div class="container">
-      <div class="navbar-header">
-        <button type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" class="navbar-toggle collapsed"><span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></span></button><a href="#" class="navbar-brand">Golden Gate</a>
-      </div>
-      <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
-        <ul class="nav navbar-nav">
-          <li><a href="/">SMS/MMS</a></li>
-          <li><a href="/apps">Apps</a></li>
-          <li><a href="/numbers">Numbers</a></li>
-          <li class="active"><a href="/shortcodes">Short Codes</a></li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="/help">Help & Docs</a></li>
-          <li class="dropdown"><a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle">Account<span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="/account">Account Settings</a></li>
-              <li><a href="/profile">Profile</a></li>
-              <li><a href="/users">Users</a></li>
-              <li role="separator" class="divider">  </li>
-              <li><a href="#">Logout</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
+      <footer>
+        <div class="col-sm-6">
+          <div class="copyright"> <span>© Copyright 2016</span><b>Vivial Inc.</b></div>
+        </div>
+        <div class="col-sm-6">
+          <ul class="list-inline text-right footer-links">
+            <li><a href="#">Terms of Service </a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Support</a></li>
+            <li><a href="#">Features</a></li>
+          </ul>
+        </div>
+      </footer>
     </div>
-  </nav>
+  </div>
   <div id="modalCreateNewApplication" class="modal fade">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
+          <button type="button" data-dismiss="modal" aria-label="Close" class="close"></button>
           <h4 class="modal-title">Create New Application</h4>
         </div>
         <div class="modal-body">
@@ -77,7 +105,7 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
+          <button type="button" data-dismiss="modal" aria-label="Close" class="close"></button>
           <h4 class="modal-title">Edit Application</h4>
         </div>
         <div class="modal-body">
@@ -115,8 +143,9 @@
                 <input type="checkbox"/>Accept incoming messages
               </label>
             </div>
+            <hr/>
             <div class="well danger">
-              <h3>Delete Application</h3>
+              <p class="text-danger"><b>Delete Application</b></p>
               <p>Warning text that explains what deleteing an application means</p>
               <button class="btn btn-danger">Delete Application</button>
             </div>
@@ -130,7 +159,7 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
+          <button type="button" data-dismiss="modal" aria-label="Close" class="close"></button>
           <h4 id="myModalLabel" class="modal-title">Add New User</h4>
         </div>
         <div class="modal-body">
@@ -172,7 +201,7 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
+          <button type="button" data-dismiss="modal" aria-label="Close" class="close"></button>
           <h4 id="myModalLabel" class="modal-title">Buy This Number?</h4>
         </div>
         <div class="modal-body">
@@ -190,20 +219,20 @@
     <div role="document" class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
+          <button type="button" data-dismiss="modal" aria-label="Close" class="close"></button>
           <h4 id="myModalLabel" class="modal-title">Edit Phone Number</h4>
         </div>
         <div class="modal-body">
           <div class="row">
             <div class="col-sm-6">
               <div class="well text-center">
-                <h5>Number:</h5>
+                <h5 class="text-caps">Number</h5>
                 <h3 class="text-green">(212) 456-7890</h3>
               </div>
             </div>
             <div class="col-sm-6">
               <div class="well text-center">
-                <h5>Location:</h5>
+                <h5 class="text-caps">Location</h5>
                 <h3 class="text-green">New York, NY</h3>
               </div>
             </div>
@@ -227,8 +256,9 @@
                 </div>
               </div>
             </div>
+            <hr/>
             <div class="well danger">
-              <h3>Release Number</h3>
+              <p class="text-danger"><b>Release Number</b></p>
               <p>Warning text that explains what releasing a number means</p><a href="#" class="btn btn-danger">Release Number</a>
             </div>
           </form>
@@ -239,32 +269,6 @@
         </div>
       </div>
     </div>
-  </div>
-  <header>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-8">
-          <h1>Short Codes</h1>
-        </div>
-        <div class="col-sm-4 text-right"> 
-        </div>
-      </div>
-    </div>
-  </header>
-  <div class="container">
-    <footer>
-      <div class="col-sm-6">
-        <div class="copyright"> <span>© Copyright 2016</span><b>Vivial Inc.</b></div>
-      </div>
-      <div class="col-sm-6">
-        <ul class="list-inline text-right footer-links">
-          <li><a href="#">Terms of Service </a></li>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Support</a></li>
-          <li><a href="#">Features</a></li>
-        </ul>
-      </div>
-    </footer>
   </div>
   <script src="/assets/js/jquery.js"></script>
   <script src="/assets/js/bootstrap.js"></script>

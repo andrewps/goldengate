@@ -7,23 +7,13 @@ body {
   font-family: "Arial", sans-serif;
   color: #000000;
 }
-h1 {
-  font-weight: bold;
-}
-h2 {
-  font-weight: bold;
-}
-h3 {
-  font-weight: normal;
-}
-h4 {
-  font-weight: normal;
-}
-h5 {
-  font-weight: normal;
-}
+h1,
+h2,
+h3,
+h4,
+h5,
 h6 {
-  font-weight: normal;
+  font-weight: bold;
 }
 a {
   color: #24D235;
@@ -38,8 +28,16 @@ a:hover {
 .text-right {
   text-align: right;
 }
-.text-green {
+.text-green,
+.text-success {
   color: #24D235;
+}
+.text-red,
+.text-danger {
+  color: #F34C4C;
+}
+.text-caps {
+  text-transform: uppercase;
 }
 .well {
   background: none;
@@ -129,28 +127,42 @@ ol.breadcrumb li.active {
 }
 /** UI **/
 /** Forms & Inputs **/
+form .form-control {
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding: 0px 12px;
+  font-size: 14px;
+  color: #676767;
+  background-color: #FFFFFF;
+  background-image: none;
+  border: 1px solid #CDCDCD;
+  -webkit-border-radius: 2px;
+          border-radius: 2px;
+  -webkit-box-shadow: inset 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: inset 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
+}
+form .form-control:focus {
+  -webkit-box-shadow: inset 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: inset 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
+  border-color: #a7a7a7;
+}
+form .form-control:active {
+  -webkit-box-shadow: inset 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: inset 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
+  border-color: #a7a7a7;
+}
+form .form-control[readonly],
+form .form-control[readonly]:active,
+form .form-control[readonly]:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-color: #CDCDCD;
+}
 form .form-group label {
   color: #676767;
   font-size: 12px;
   font-weight: normal;
-}
-form .form-group input {
-  color: #000000;
-  border: 1px solid #CDCDCD;
-  -webkit-box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.25);
-          box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.25);
-  -webkit-border-radius: 2px;
-          border-radius: 2px;
-}
-form .form-group input:focus {
-  -webkit-box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.25);
-          box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.25);
-  border-color: #b4b4b4;
-}
-form .form-group input:active {
-  -webkit-box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.25);
-          box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.25);
-  border-color: #b4b4b4;
 }
 form .form-group::-webkit-input-placeholder {
   color: #EBEBEB;
@@ -357,6 +369,9 @@ select:before {
 .btn-icon.btn-trash {
   background-image: url(/assets/images/icon-trash.png);
 }
+.input-group-btn .btn {
+  height: 40px;
+}
 .nav.nav-tabs {
   border-bottom: none;
 }
@@ -434,36 +449,61 @@ td.config span {
   background-color: #77F139;
 }
 /** Modals **/
-/**!
-  BLUR BACKGROUND
-  body.modal-open {
-  filter: blur(5px);
+/**! BLUR BACKGROUND !**/
+body.modal-open .page {
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
 }
-!**/
 .modal-backdrop {
   background: #000000;
 }
 .modal-backdrop.in {
-  opacity: 0.85;
+  opacity: 0.75;
 }
 .modal .modal-dialog .modal-content {
   border: none;
   -webkit-border-radius: 0;
           border-radius: 0;
   background: #FFFFFF;
-  -webkit-box-shadow: 0px 4px 10px 2px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 4px 10px 2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
 }
 .modal .modal-dialog .modal-content .modal-header {
+  position: relative;
   border-bottom: 1px solid #CDCDCD;
 }
 .modal .modal-dialog .modal-content .modal-header .modal-title {
+  color: #676767;
   font-weight: normal;
   text-transform: uppercase;
+}
+.modal .modal-dialog .modal-content button.close {
+  opacity: 1;
+  background-image: url(/assets/images/close.png);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-color: #FFFFFF;
+  -webkit-border-radius: 2px;
+          border-radius: 2px;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  margin-top: -20px;
+}
+.modal .modal-dialog .modal-content button.close span {
+  display: none;
+}
+.modal .modal-dialog .modal-content button.close:hover {
+  background-color: #fbfbfb;
 }
 .modal .modal-dialog .modal-content .modal-footer {
   background: #FFFFFF;
   border-top: 1px solid #CDCDCD;
+}
+#modalEditApplication .well.danger {
+  margin: 30px 0;
 }
 .spinner {
   height: 60px;

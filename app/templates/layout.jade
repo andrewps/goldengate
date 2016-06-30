@@ -6,35 +6,37 @@ head
   link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css')
   link(rel='stylesheet', href='#{STATIC_URL}css/main.css')
 body
-  include includes/_header
+  .page
+    include includes/_header  
+
+    block header
+      header
+        .container: .row
+          .col-sm-8
+            block header-title
+              h1 SMS & MMS API
+          .col-sm-4.text-right 
+            block header-button
+              a.btn.btn-primary.btn-ghost + Purchase a Number
+
+    .container
+
+      block content
+
+      block footer
+        footer
+          .col-sm-6
+            .copyright 
+              span © Copyright 2016
+              b Vivial Inc.
+          .col-sm-6
+            ul.list-inline.text-right.footer-links
+              li: a(href="#") Terms of Service 
+              li: a(href="#") Privacy Policy
+              li: a(href="#") Support
+              li: a(href="#") Features
+    
   include includes/_modals
-
-  block header
-    header
-      .container: .row
-        .col-sm-8
-          block header-title
-            h1 SMS & MMS API
-        .col-sm-4.text-right 
-          block header-button
-            a.btn.btn-primary.btn-ghost + Purchase a Number
-
-  .container
-
-    block content
-
-    block footer
-      footer
-        .col-sm-6
-          .copyright 
-            span © Copyright 2016
-            b Vivial Inc.
-        .col-sm-6
-          ul.list-inline.text-right.footer-links
-            li: a(href="#") Terms of Service 
-            li: a(href="#") Privacy Policy
-            li: a(href="#") Support
-            li: a(href="#") Features
   script(src='#{STATIC_URL}js/jquery.js')
   script(src='#{STATIC_URL}js/bootstrap.js')
   script.

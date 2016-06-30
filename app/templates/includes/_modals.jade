@@ -4,7 +4,6 @@
     .modal-content
       .modal-header
         button.close(type='button', data-dismiss='modal', aria-label='Close')
-          span(aria-hidden='true') ×
         h4.modal-title Create New Application
       .modal-body
         form
@@ -34,7 +33,6 @@
     .modal-content
       .modal-header
         button.close(type='button', data-dismiss='modal', aria-label='Close')
-          span(aria-hidden='true') ×
         h4.modal-title Edit Application
       .modal-body
         form
@@ -56,8 +54,9 @@
             label
               input(type="checkbox") 
               | Accept incoming messages
+          hr
           .well.danger
-            h3 Delete Application
+            p.text-danger: b Delete Application
             p Warning text that explains what deleteing an application means
             button.btn.btn-danger Delete Application
       .modal-footer
@@ -72,7 +71,6 @@
     .modal-content
       .modal-header
         button.close(type='button', data-dismiss='modal', aria-label='Close')
-          span(aria-hidden='true') ×
         h4#myModalLabel.modal-title Add New User
       .modal-body
         form
@@ -105,7 +103,6 @@
     .modal-content
       .modal-header
         button.close(type='button', data-dismiss='modal', aria-label='Close')
-          span(aria-hidden='true') ×
         h4#myModalLabel.modal-title Buy This Number?
       .modal-body
         h1.text-center
@@ -123,17 +120,16 @@
     .modal-content
       .modal-header
         button.close(type='button', data-dismiss='modal', aria-label='Close')
-          span(aria-hidden='true') ×
         h4#myModalLabel.modal-title Edit Phone Number
       .modal-body
         .row
           .col-sm-6
             .well.text-center
-              h5 Number:
+              h5.text-caps Number
               h3.text-green (212) 456-7890
           .col-sm-6
             .well.text-center
-              h5 Location:
+              h5.text-caps Location
               h3.text-green New York, NY
         form
           .form-group
@@ -149,8 +145,9 @@
                 label Fallback ID
                 input(class="form-control" type="text" placeholder="Fallback ID")
 
+          hr
           .well.danger
-            h3 Release Number
+            p.text-danger: b Release Number
             p Warning text that explains what releasing a number means
             a(href="#").btn.btn-danger Release Number
 
