@@ -42,7 +42,7 @@
               input(type='text', placeholder='Name', class='form-control')
             .col-sm-6: .form-group
               label ID
-              input(type='text', placeholder='ID', class='form-control' readonly)
+              input(type='text', placeholder='ID', value='279234697235', class='form-control' readonly)
           .row
             .col-sm-6: .form-group
               label Callback URL
@@ -86,12 +86,18 @@
                   option None
                   option Type Option
           .row
-            .col-sm-12 
-              input(type="radio" id="administrator")
-              label(for="administrator") Administrator  - Can access all features including inviting users and creating sub-accounts.
             .col-sm-12
-              input(type="radio" id="user")
-              label(for="user") User - Full access to APIs, but can not edit users or accounts
+              .radio
+                label(for="administrator")
+                  input(type="radio" id="administrator")
+                  | Administrator
+              small Can access all features including inviting users and creating sub-accounts.
+            .col-sm-12
+              .radio
+                label(for="user")
+                  input(type="radio" id="user")
+                  | User
+              small Full access to APIs, but can not edit users or accounts
       .modal-footer
         a.btn.btn-default(type='button', data-dismiss='modal') Cancel
         a.btn.btn-primary(type='button') Send Invitation

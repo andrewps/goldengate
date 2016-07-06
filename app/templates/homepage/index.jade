@@ -1,0 +1,40 @@
+extends ../layout-website
+
+block nav-website
+
+block header-website
+
+block content
+  .homepage
+    include ../includes/_header-website
+    .homepage-hero
+      .container
+        .row
+          .col-sm-8
+            h1 
+              div Build Efficient and Reliable
+              div: strong TEXT MESSAGING APPS
+              div span for the Lowest Possible Price
+            h2 A Simple, Inexpensive SMS/MMS API
+          .col-sm-4
+            .cta
+              a(href="#").btn.btn-primary.btn-lg.btn-block Request Free API Key
+              br
+              .text-center 
+                a(href="/about") or learn more
+    .container
+      footer
+        .col-sm-6
+          .copyright 
+            span © Copyright 2016
+            b Vivial Inc.
+        .col-sm-6
+          ul.list-inline.text-right.footer-links
+            li: a(href="#") Terms of Service 
+            li: a(href="#") Privacy Policy
+            li: a(href="#") Support
+            li: a(href="#") Features
+
+block homepage-cta
+
+block footer

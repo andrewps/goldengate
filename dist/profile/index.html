@@ -171,7 +171,7 @@
               <div class="col-sm-6">
                 <div class="form-group">
                   <label>ID</label>
-                  <input type="text" placeholder="ID" readonly="readonly" class="form-control"/>
+                  <input type="text" placeholder="ID" value="279234697235" readonly="readonly" class="form-control"/>
                 </div>
               </div>
             </div>
@@ -233,13 +233,19 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-sm-12"> 
-                <input type="radio" id="administrator"/>
-                <label for="administrator">Administrator  - Can access all features including inviting users and creating sub-accounts.</label>
+              <div class="col-sm-12">
+                <div class="radio">
+                  <label for="administrator">
+                    <input type="radio" id="administrator"/>Administrator
+                  </label>
+                </div><small>Can access all features including inviting users and creating sub-accounts.</small>
               </div>
               <div class="col-sm-12">
-                <input type="radio" id="user"/>
-                <label for="user">User - Full access to APIs, but can not edit users or accounts</label>
+                <div class="radio">
+                  <label for="user">
+                    <input type="radio" id="user"/>User
+                  </label>
+                </div><small>Full access to APIs, but can not edit users or accounts</small>
               </div>
             </div>
           </form>

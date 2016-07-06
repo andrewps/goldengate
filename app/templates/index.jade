@@ -9,14 +9,14 @@ block header-button
 
 block content
   .row
-    .col-sm-4
-      .col-sm-6
+    .col-sm-5
+      .credentials.account
         label Account
         div: code 123456789
-      .col-sm-6
+      .credentials.apikey
         label API Key
         div: code ef46ceff50ea5d0210e3d478a88e35d4
-    .col-sm-8
+    .col-sm-7
       .col-sm-6
         a(href="/numbers", class="sms-link link-numbers")
           h4 Phone Numbers
@@ -28,13 +28,37 @@ block content
   
   ul.nav.nav-tabs(role='tablist')
     li.active(role='presentation')
-      a(href='#home', aria-controls='home', role='tab', data-toggle='tab') Usage
+      a(href='#usage', aria-controls='usage', role='tab', data-toggle='tab') Usage
     li(role='presentation')
-      a(href='#profile', aria-controls='profile', role='tab', data-toggle='tab') Logs
+      a(href='#logs', aria-controls='logs', role='tab', data-toggle='tab') Logs
   .card
     .tab-content
-      #home.tab-pane.fade.in.active(role='tabpanel') Usage
-      #profile.tab-pane.fade(role='tabpanel')
+      #usage.tab-pane.fade.in.active(role='tabpanel')
+        .row
+          .col-sm-8
+            //- Fake Chart
+            img(src="assets/images/fake-chart.png")
+          .col-sm-4
+            form#Usage
+              .form-group
+                label Time Span
+                select(class='form-control')
+                  option Last Week
+                  option Last Month
+                  option Last Year
+              .form-group
+                label Filter
+                select(class='form-control')
+                  option All
+                  option Filter One
+                  option Filter Two
+              .form-group
+                label Filter
+                select(class='form-control')
+                  option All
+                  option Sent
+                  option Received
+      #logs.tab-pane.fade(role='tabpanel')
         form#searchLogs
           .row
             .col-sm-4
@@ -67,6 +91,27 @@ block content
             td To
             td Status
           tbody
+            tr
+              td 5/05/15
+              td 000234
+              td Incoming
+              td: a(href="#") 2394872334
+              td: a(href="#") 2394872334
+              td: .tag-error Error
+            tr
+              td 5/05/15
+              td 000234
+              td Incoming
+              td: a(href="#") 2394872334
+              td: a(href="#") 2394872334
+              td: .tag-ok OK
+            tr
+              td 5/05/15
+              td 000234
+              td Incoming
+              td: a(href="#") 2394872334
+              td: a(href="#") 2394872334
+              td: .tag-pending Pending
             tr
               td 5/05/15
               td 000234

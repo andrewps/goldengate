@@ -1,0 +1,43 @@
+head
+  title Golden Gate
+  meta(name='viewport', content='initial-scale=1, maximum-scale=1')
+  meta(http-equiv="X-UA-Compatible" content="IE=10; IE=9; IE=8; IE=7; IE=EDGE")
+  link(rel='icon', type='image/png', sizes='192x192', href='#{STATIC_URL}images/favicon/android-icon-192x192.png')   
+  link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css')
+  link(rel='stylesheet', href='#{STATIC_URL}css/main.css')
+body
+  block nav-website
+    include includes/_header-website
+
+  block header-website
+    header.website
+      .overlay
+      .container: .row
+        .col-sm-12
+          block header-website-title
+            .text-center: h1 HOMEPAGE
+
+  
+
+  block content
+
+  block homepage-cta
+    include includes/_homepage-cta
+
+  block footer
+    .container
+      footer
+        .col-sm-6
+          .copyright 
+            span © Copyright 2016
+            b Vivial Inc.
+        .col-sm-6
+          ul.list-inline.text-right.footer-links
+            li: a(href="#") Terms of Service 
+            li: a(href="#") Privacy Policy
+            li: a(href="#") Support
+            li: a(href="#") Features
+    
+  include includes/_modals
+  script(src='#{STATIC_URL}js/jquery.js')
+  script(src='#{STATIC_URL}js/bootstrap.js')

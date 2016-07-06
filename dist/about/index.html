@@ -1,0 +1,314 @@
+
+<head>
+  <title>Golden Gate</title>
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=10; IE=9; IE=8; IE=7; IE=EDGE"/>
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/images/favicon/android-icon-192x192.png"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css"/>
+  <link rel="stylesheet" href="/assets/css/main.css"/>
+</head>
+<body>
+  <nav class="navbar navbar-default website">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" class="navbar-toggle collapsed"><span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></span></button><a href="/homepage" class="navbar-brand">Golden Gate</a>
+      </div>
+      <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="/about">About</a></li>
+          <li><a href="/products">Products</a></li>
+          <li><a href="/pricing">Pricing</a></li>
+          <li><a href="/help">Help & Docs</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">       
+          <li><a href="/login" class="btn btn-ghost">Login</a></li>
+          <li><a href="/register" class="btn btn-ghost">Signup</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <header class="website">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="text-center">
+            <h1>About</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section class="about-headline">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 col-centered">
+          <div class="text-center">
+            <h3>Catchy Headline About GoldenGate</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium pretium tempor. Ut eget imperdiet neque. In volutpat ante semper diam molestie, et aliquam erat laoreet.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="features">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="feature">
+            <div class="icon--sms"></div>
+            <h3>SMS/MMS</h3>
+            <p>Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum</p>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="feature">
+            <div class="icon--short-codes"></div>
+            <h3>Short Codes</h3>
+            <p>Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum</p>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="feature">
+            <div class="icon--apps"></div>
+            <h3>Applications</h3>
+            <p>Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="homepage-cta">
+    <h3 class="text-center"><span>READY TO GET STARTED BUILDING YOUR </span><br/><b>TEXT MESSAGING APP?</b></h3><a class="btn btn-primary btn-pill">Sign Up Today</a>
+  </div>
+  <div class="container">
+    <footer>
+      <div class="col-sm-6">
+        <div class="copyright"> <span>© Copyright 2016</span><b>Vivial Inc.</b></div>
+      </div>
+      <div class="col-sm-6">
+        <ul class="list-inline text-right footer-links">
+          <li><a href="#">Terms of Service </a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Support</a></li>
+          <li><a href="#">Features</a></li>
+        </ul>
+      </div>
+    </footer>
+  </div>
+  <div id="modalCreateNewApplication" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" data-dismiss="modal" aria-label="Close" class="close"></button>
+          <h4 class="modal-title">Create New Application</h4>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label>Name</label>
+              <input type="text" placeholder="Name your application" class="form-control"/>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label>Callback URL</label>
+                  <input type="text" placeholder="Callback URL" class="form-control"/>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label>Fallback URL</label>
+                  <input type="text" placeholder="Fallback URL" class="form-control"/>
+                </div>
+              </div>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox"/>Accept incoming messages
+              </label>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer"><a type="button" data-dismiss="modal" class="btn btn-default">Cancel</a><a type="button" class="btn btn-primary">Create Application</a></div>
+      </div>
+    </div>
+  </div>
+  <div id="modalEditApplication" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" data-dismiss="modal" aria-label="Close" class="close"></button>
+          <h4 class="modal-title">Edit Application</h4>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label>Name</label>
+                  <input type="text" placeholder="Name" class="form-control"/>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label>ID</label>
+                  <input type="text" placeholder="ID" value="279234697235" readonly="readonly" class="form-control"/>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label>Callback URL</label>
+                  <input type="text" placeholder="Callback URL" class="form-control"/>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label>Fallback URL</label>
+                  <input type="text" placeholder="Fallback URL" class="form-control"/>
+                </div>
+              </div>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox"/>Accept incoming messages
+              </label>
+            </div>
+            <hr/>
+            <div class="well danger">
+              <p class="text-danger"><b>Delete Application</b></p>
+              <p>Warning text that explains what deleteing an application means</p>
+              <button class="btn btn-danger">Delete Application</button>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer"><a type="button" data-dismiss="modal" class="btn btn-default">Cancel</a><a type="button" class="btn btn-primary">Save Application</a></div>
+      </div>
+    </div>
+  </div>
+  <div id="modalAddUsers" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" data-dismiss="modal" aria-label="Close" class="close"></button>
+          <h4 id="myModalLabel" class="modal-title">Add New User</h4>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label>New User's Email</label>
+                  <input type="email" placeholder="Email" class="form-control"/>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label>Sub-Account Type</label>
+                  <select class="form-control">
+                    <option>None</option>
+                    <option>Type Option</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="radio">
+                  <label for="administrator">
+                    <input type="radio" id="administrator"/>Administrator
+                  </label>
+                </div><small>Can access all features including inviting users and creating sub-accounts.</small>
+              </div>
+              <div class="col-sm-12">
+                <div class="radio">
+                  <label for="user">
+                    <input type="radio" id="user"/>User
+                  </label>
+                </div><small>Full access to APIs, but can not edit users or accounts</small>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer"><a type="button" data-dismiss="modal" class="btn btn-default">Cancel</a><a type="button" class="btn btn-primary">Send Invitation</a></div>
+      </div>
+    </div>
+  </div>
+  <div id="modalBuyNumber" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" data-dismiss="modal" aria-label="Close" class="close"></button>
+          <h4 id="myModalLabel" class="modal-title">Buy This Number?</h4>
+        </div>
+        <div class="modal-body">
+          <h1 class="text-center">+1 (212) 555-5555</h1>
+          <h1 class="text-center text-green">$1.00 / month</h1>
+        </div>
+        <div class="modal-footer">
+          <button type="button" data-dismiss="modal" class="btn btn-default">Close</button>
+          <button type="button" class="btn btn-primary">Buy This Number</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="modalEditNumber" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="modal fade">
+    <div role="document" class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" data-dismiss="modal" aria-label="Close" class="close"></button>
+          <h4 id="myModalLabel" class="modal-title">Edit Phone Number</h4>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="well text-center">
+                <h5 class="text-caps">Number</h5>
+                <h3 class="text-green">(212) 456-7890</h3>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="well text-center">
+                <h5 class="text-caps">Location</h5>
+                <h3 class="text-green">New York, NY</h3>
+              </div>
+            </div>
+          </div>
+          <form>
+            <div class="form-group">
+              <label>Phone Number</label>
+              <input type="text" placeholder="Phone Number" value="(212) 456-7890" class="form-control"/>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label>Callback ID</label>
+                  <input type="text" placeholder="Callback ID" class="form-control"/>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label>Fallback ID</label>
+                  <input type="text" placeholder="Fallback ID" class="form-control"/>
+                </div>
+              </div>
+            </div>
+            <hr/>
+            <div class="well danger">
+              <p class="text-danger"><b>Release Number</b></p>
+              <p>Warning text that explains what releasing a number means</p><a href="#" class="btn btn-danger">Release Number</a>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" data-dismiss="modal" class="btn btn-default">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="/assets/js/jquery.js"></script>
+  <script src="/assets/js/bootstrap.js"></script>
+</body>

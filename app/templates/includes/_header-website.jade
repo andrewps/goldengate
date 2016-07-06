@@ -1,0 +1,22 @@
+nav.navbar.navbar-default.website
+  .container
+    .navbar-header
+      button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
+        span
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+      a.navbar-brand(href='/homepage') Golden Gate
+    #bs-example-navbar-collapse-1.collapse.navbar-collapse
+      ul.nav.navbar-nav
+        block nav-sms
+          li: a(href='/about') About
+        block nav-apps
+          li: a(href='/products') Products
+        block nav-numbers
+          li: a(href='/pricing') Pricing
+        block nav-help
+          li: a(href='/help') Help & Docs
+      ul.nav.navbar-nav.navbar-right        
+        li: a(href='/login').btn.btn-ghost Login
+        li: a(href='/register').btn.btn-ghost Signup

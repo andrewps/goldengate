@@ -22,6 +22,9 @@ a:hover {
   color: #20bc30;
   text-decoration: underline;
 }
+img {
+  max-width: 100%;
+}
 .text-center {
   text-align: center;
 }
@@ -59,6 +62,7 @@ hr {
 code {
   background-color: #24D235;
   color: #FFFFFF;
+  font-size: 16px;
 }
 /** Cards **/
 .card {
@@ -201,25 +205,6 @@ form .has-error .help-block,
 form .has-error .checkbox {
   color: #F34C4C;
 }
-.radio {
-  display: block;
-  margin: 0;
-  line-height: normal;
-  cursor: pointer !important;
-}
-.radio input {
-  cursor: pointer;
-  margin: 0;
-  margin-right: 5px;
-  padding: 0;
-  position: relative;
-}
-.radio label {
-  margin: 0;
-  padding: 0;
-  height: auto;
-  min-height: auto;
-}
 /** Select Menus **/
 select,
 select.form-control {
@@ -264,6 +249,10 @@ select:before {
   border: none;
   font-weight: normal;
   border: 1px solid;
+}
+.btn.btn-pill {
+  -webkit-border-radius: 100px;
+          border-radius: 100px;
 }
 .btn.btn-primary {
   background-color: #24D235;
@@ -398,6 +387,7 @@ select:before {
 }
 table {
   width: 100%;
+  border: 1px solid #CDCDCD;
 }
 table thead {
   font-weight: bold;
@@ -568,6 +558,23 @@ body.modal-open .page {
   -webkit-border-radius: 0;
           border-radius: 0;
 }
+/** Radio Buttons **/
+.radio *,
+.radio-inline .checkbox *,
+.checkbox-inline * {
+  cursor: pointer;
+}
+.radio label,
+.radio-inline .checkbox label,
+.checkbox-inline label {
+  margin: 0;
+}
+.radio-inline + .radio-inline {
+  margin-left: 20px;
+}
+.radio + label {
+  cursor: pointer;
+}
 /** Components **/
 /** Navbar **/
 nav.navbar.navbar-default {
@@ -710,7 +717,203 @@ ul.help-section li.help-title {
   right: 10px;
   content: "→";
 }
+.homepage {
+  background-image: url('/assets/images/bg-photo-green.png');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.homepage nav.navbar {
+  background-color: transparent !important;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.homepage nav.navbar ul.nav.navbar-nav li a {
+  color: rgba(255, 255, 255, 0.5);
+}
+.homepage .homepage-hero {
+  color: #FFFFFF;
+  -webkit-box-flex: 2;
+  -webkit-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+.homepage .homepage-hero h1 {
+  font-size: 40px;
+  line-height: 54px;
+  font-weight: normal;
+}
+.homepage .homepage-hero h2 {
+  margin-top: 40px;
+  font-size: 24px;
+  line-height: normal;
+  font-weight: normal;
+}
+.homepage .homepage-hero .cta {
+  margin-top: 40px;
+}
+.homepage footer {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+}
+.homepage footer .copyright {
+  color: rgba(255, 255, 255, 0.25);
+}
+.homepage footer .footer-links a {
+  color: rgba(255, 255, 255, 0.25);
+}
+.homepage footer .footer-links a:hover {
+  color: #FFFFFF;
+}
+nav.navbar.website a.btn {
+  margin: 12px 10px 0;
+  padding: 6px 12px;
+  height: normal;
+  line-height: normal;
+}
+header.website {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 80px 0 100px;
+  background-image: url('/assets/images/bg-photo-green.png');
+  background-size: cover;
+  background-position: 50% 60%;
+}
+header.website h1 {
+  color: #FFFFFF;
+  font-size: 64px;
+}
+section {
+  margin: 40px 0;
+}
+section.about-headline h3 {
+  color: #24D235;
+  font-weight: normal;
+}
+section.about-headline p {
+  font-size: 16px;
+  line-height: 26px;
+  color: #676767;
+}
+.feature {
+  text-align: center;
+}
+.feature h3 {
+  font-weight: normal;
+  color: #24D235;
+}
+.feature p {
+  font-size: 16px;
+  line-height: 26px;
+  color: #676767;
+}
+[class*='icon--'] {
+  margin: 40px auto;
+  width: 220px;
+  height: 220px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+.icon--sms {
+  background-image: url('/assets/images/sms.png');
+}
+.icon--short-codes {
+  background-image: url('/assets/images/short-codes.png');
+}
+.icon--apps {
+  background-image: url('/assets/images/apps.png');
+}
+.icon--campaign-management {
+  background-image: url('/assets/images/campaign-management.png');
+}
+.icon--ip-messaging {
+  background-image: url('/assets/images/ip-messaging.png');
+}
+.homepage-cta {
+  color: #FFFFFF;
+  background-image: url('/assets/images/stripes.png');
+  background-repeat: repeat;
+  background-color: #04867E;
+  text-align: center;
+  padding: 60px 0;
+}
+.homepage-cta h3 {
+  font-weight: normal;
+  line-height: 40px;
+}
+.homepage-cta a.btn {
+  margin: 20px 0;
+  padding: 0 60px;
+  min-height: 60px;
+  line-height: 60px;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  -webkit-box-shadow: 0px 8px 10px 2px rgba(0, 0, 0, 0.05);
+          box-shadow: 0px 8px 10px 2px rgba(0, 0, 0, 0.05);
+}
+.pricing .pricing-row {
+  border-top: 2px solid #CDCDCD;
+  padding: 40px 0;
+}
+.pricing .product h4 {
+  color: #04867E;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 14px;
+}
+.pricing .segment h5 {
+  color: #676767;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #CDCDCD;
+}
+.pricing .segment .price {
+  color: #24D235;
+}
+.pricing .segment .price .amount {
+  font-size: 24px;
+}
+.pricing .segment .price .description {
+  color: #989898;
+}
+.pricing .footnote {
+  position: relative;
+  padding-left: 30px;
+  color: #989898;
+  font-style: italic;
+}
+.pricing .footnote:before {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 16px;
+  content: "*";
+}
 /** Page Specific Styles **/
+.credentials {
+  display: inline-block;
+}
+.credentials.account {
+  margin-right: 10px;
+}
 a.sms-link {
   display: block;
   padding: 10px 60px 10px 10px;
@@ -744,7 +947,6 @@ a.sms-link:hover {
 .form-button .btn {
   margin-top: 24px;
 }
-form#searchPhoneNumbers span.radio {
-  display: inline-block;
-  margin-left: 15px;
+form#searchPhoneNumbers span.radio-inline {
+  margin-top: 8px;
 }
