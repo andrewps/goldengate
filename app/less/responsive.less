@@ -1,0 +1,129 @@
+/* ==========  Mobile First Method  ========== */
+
+/* Custom, iPhone Retina */ 
+@media only screen and (min-width : 320px) {
+    
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
+}
+
+
+
+/* ==========  Non-Mobile First Method  ========== */
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+  .homepage {
+    display: block;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    nav, .homepage-hero, footer {
+      flex: none;
+    }
+
+    nav.navbar {
+      background-color: @black;
+      display: block;
+    }
+    .homepage-hero {
+      margin: 40px 0;
+      text-align: center;
+      h1 {
+        font-size: 34px;
+      }
+      h2 {
+
+      }
+    }
+  }
+
+  .navbar.navbar-default {
+    background-color: @black;
+    .navbar-toggle {
+      border-color: @white;
+      background-color: transparent;
+      .icon-bar {
+        background-color: @white; 
+      }
+      &:focus,
+      &:active {
+        background-color: transparent;
+      }
+    }
+    .navbar-collapse, .navbar-form {
+      border-color: @darkgrey;
+      box-shadow: none;
+    }
+  }
+  .dropdown-menu .divider {
+    background-color: @darkgrey;
+  }
+  footer {
+    [class*='col-'] {
+      margin: 20px 0;
+      text-align: center;
+      ul.footer-links {
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width : 600px) {
+
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 480px) {
+  .homepage {
+    .homepage-hero {
+      h1 {
+        font-size: 24px;
+        line-height: 34px;
+      }
+      h2 {
+        font-style: 16px;
+      }
+    }
+  }
+
+
+}
+
+/* Custom, iPhone Retina */ 
+@media only screen and (max-width : 320px) {
+    
+}
